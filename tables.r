@@ -94,12 +94,11 @@ for (file_name in names(data_list)) {
 
 
 # Create a data frame to insert the different variables needed for the date_observed's data frame
-date_observed<- data.frame(date=character(), heure_obs=as.Date(character()),temperature_eau_c=as.numeric())
+date_observed<- data.frame(date=as.Date(character()), date_obs=as.Date(character()), heure_obs=as.Date(character()),temperature_eau_c=as.numeric())
 # Create a loop to iterate over each file in data_list
 for (file_name in names(data_list)) {
   # Select the columns needed in the new data frame and save them into a new object
-  selected_columns <- data_list[[file_name]][, c("date", "heure_obs", "temperature_eau_c")]
+  selected_columns <- data_list[[file_name]][, c("date","date_obs", "heure_obs", "temperature_eau_c")]
   # Add these to the date_observed data frame
   date_observed <- rbind(date_observed, selected_columns)
 }
-
