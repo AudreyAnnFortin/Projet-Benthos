@@ -2,6 +2,9 @@
 setwd("D:/université/BIO500/projet/benthos")
 # Charge the RSQLite library
 library(RSQLite)
+#Charge the datas and the tables from other scripts
+source("Nettoyage.R")
+source("tables.R")
 # Connect to the data base
 con <- dbConnect(SQLite(),dbname="benthos.db")
 
@@ -13,6 +16,8 @@ creer_observation<-
       date_obs  DATE
       abondance REAL CHECK (abondance >= 0)
       fraction  REAL CHECK (fraction >= 0)
+      FOREIGN KEY (site) REFERENCES site(site),
+      FOREIGN KEY (date_obs) REFERENCES date_observed(date_obs)
   );"
 dbSendQuery(con, creer_observation)
 observations<- read.csv("observations.csv")
