@@ -1,7 +1,5 @@
 #Authors: Amélie Garnier, Audrey-Ann Fortin and Myriam Marentette
 
-# Set working directory to the directory containing CSV files
-setwd("D:/université/BIO500/benthos")
 # Get a list of all CSV files in the directory
 csv_files <- list.files(getwd(), pattern = "\\.csv$", full.names = TRUE)
 # Create an empty list to store data frames

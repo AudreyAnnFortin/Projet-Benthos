@@ -1,5 +1,5 @@
 # Set the working directory
-setwd("D:/université/BIO500/projet/benthos")
+setwd("E:/université/BIO500/projet/benthos")
 # Charge the RSQLite library
 library(RSQLite)
 #Charge the datas and the tables from other scripts
@@ -20,7 +20,6 @@ creer_observation<-
       FOREIGN KEY (date_obs) REFERENCES date_observed(date_obs)
   );"
 dbSendQuery(con, creer_observation)
-observations<- read.csv("observations.csv")
 dbWriteTable(con,append=TRUE,name="observations",value=observations,row.names=FALSE)
 
 #Creation of the table site
