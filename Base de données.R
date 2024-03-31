@@ -39,8 +39,8 @@ dbWriteTable(con,append=TRUE,name="sites",value=sites,row.names=FALSE)
 # Creation of the table date_observed
 creer_date_observed<-
   "CREATE TABLE date_observed (
-      date    VARCHAR(50)
-      heure_obs   VARCHAR(50)
+      date                VARCHAR(50)
+      heure_obs           VARCHAR(50)
       temperature_eau_c   REAL
 );"
 dbSendQuery(con, creer_date_observed)
