@@ -50,3 +50,27 @@ dbWriteTable(con,append=TRUE,name='Observations dates',value=date_observed,row.n
 
 # disconnect from the data base
 dbDisconnect(con)
+
+# Reconnect to the database
+con <- dbConnect(SQLite(), dbname = "benthos.db")
+
+# Query to select the first few rows from each table
+query_observations <- "SELECT * FROM observations LIMIT 5;"
+query_sites <- "SELECT * FROM sites LIMIT 5;"
+query_date_observed <- "SELECT * FROM date_observed LIMIT 5;"
+
+# Execute the queries
+observations_result <- dbGetQuery(con, query_observations)
+sites_result <- dbGetQuery(con, query_sites)
+date_observed_result <- dbGetQuery(con, query_date_observed)
+
+# Print the results
+print("Observations:")
+print(observations_result)
+print("Sites:")
+print(sites_result)
+print("Date Observed:")
+print(date_observed_result)
+
+# Disconnect from the database
+dbDisconnect(con)
