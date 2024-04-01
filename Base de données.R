@@ -2,6 +2,9 @@
 setwd("E:/université/BIO500/projet/benthos")
 # Charge the RSQLite library
 library(RSQLite)
+#Charge the datas and the tables from other scripts
+source("Nettoyage.R")
+source("tables.R")
 # Connect to the data base
 con <- dbConnect(SQLite(),dbname="benthos.db")
 
@@ -17,8 +20,6 @@ creer_observation<-
       FOREIGN KEY (date_obs) REFERENCES date_observed(date_obs)
   );"
 dbSendQuery(con, creer_observation)
-#put the datas in the data base
-observations<- read.csv("observations.csv")
 dbWriteTable(con,append=TRUE,name="observations",value=observations,row.names=FALSE)
 
 #Creation of the table site
@@ -31,8 +32,7 @@ creer_site<-
       transparence_eau    REAL
 );"
 dbSendQuery(con, creer_site)
-#put the datas in the data base
-sites<- read.csv("sites.csv")
+sites<- read.csv("site.csv")
 dbWriteTable(con,append=TRUE,name="sites",value=sites,row.names=FALSE)
 
 # Creation of the table date_observed
@@ -43,13 +43,8 @@ creer_date_observed<-
       temperature_eau_c   REAL
 );"
 dbSendQuery(con, creer_date_observed)
-#put the datas in the data base
 date_observed<- read.csv("date_observed.csv")
 dbWriteTable(con,append=TRUE,name='Observations dates',value=date_observed,row.names=FALSE)
-
-#Try a request to see if it works
-reqs<-dbGetQuery(con, 'SELECT * FROM Observations dates')
-reqs
 
 # disconnect from the data base
 dbDisconnect(con)
