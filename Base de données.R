@@ -32,7 +32,7 @@ creer_site<-
 );"
 dbSendQuery(con, creer_site)
 #get the datas to put them in the data base
-sites<- read.csv("site.csv")
+sites<- read.csv("sites.csv")
 dbWriteTable(con,append=TRUE,name="sites",value=sites,row.names=FALSE)
 
 # Creation of the table date_observed
