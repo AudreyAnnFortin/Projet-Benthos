@@ -40,6 +40,7 @@ creer_date_observed<-
   "CREATE TABLE date_observed (
       date                VARCHAR(50)
       heure_obs           VARCHAR(50)
+      date_obs            DATE
       temperature_eau_c   REAL
 );"
 dbSendQuery(con, creer_date_observed)
