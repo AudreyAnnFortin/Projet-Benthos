@@ -5,6 +5,14 @@ library(RSQLite)
 # Connect to the data base
 con <- dbConnect(SQLite(),dbname="benthos.db")
 
+
+#                 supprimer table pour la modifier
+#delete_cmnd <- 
+#  "DROP TABLE date_observed"
+#dbSendQuery(con, delete_cmnd)
+#dbListTables(con)
+
+
 # Creation of the table observation
 creer_observation<-
   "CREATE TABLE observations (
