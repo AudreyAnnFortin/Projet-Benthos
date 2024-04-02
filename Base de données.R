@@ -24,11 +24,12 @@ dbWriteTable(con,append=TRUE,name="observations",value=observations,row.names=FA
 #Creation of the table site
 creer_site<-
   "CREATE TABLE sites (
-      site                VARCHAR(100) PRIMARY KEY,
+      site                VARCHAR(100),
       largeur_riviere     REAL,
       profondeur_riviere  REAL,
       vitesse_courant     REAL,
       transparence_eau    REAL
+      PRIMARY KEY         (site)
 );"
 dbSendQuery(con, creer_site)
 #get the datas to put them in the data base
@@ -39,9 +40,10 @@ dbWriteTable(con,append=TRUE,name="sites",value=sites,row.names=FALSE)
 creer_date_observed<-
   "CREATE TABLE date_observed (
       date                VARCHAR(50),
-      heure_obs           VARCHAR(50),
       date_obs            DATE,
-      temperature_eau_c   REAL
+      heure_obs           VARCHAR(50),
+      temperature_eau_c   REAL,
+      PRIMARY KEY         (date_obs)
 );"
 dbSendQuery(con, creer_date_observed)
 #get the datas to put them in the data base
