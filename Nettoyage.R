@@ -67,3 +67,5 @@ for (file_name in names(data_list)) {
   # Update the data frame in data_list
   data_list[[file_name]] <- bent
 }
+
+#maintenant le data_list contient les 3 tableaux de données qui seront utilisé pour la SQL.
