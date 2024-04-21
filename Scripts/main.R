@@ -4,5 +4,5 @@
 #batir les figures
 #faire le rmarkdown
 
-#appel a la fonction source
-source("Nettoyage.R")
+#appel au script fonctions.R
+source("fonctions.R")
