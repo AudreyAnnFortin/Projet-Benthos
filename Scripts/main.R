@@ -5,7 +5,7 @@
 #faire le rmarkdown
 
 #set the working directory
-setwd("E:/université/BIO500/projet/benthos")
+working_directory <- getwd()
 
 # ===========================================
 # _targets.R file
@@ -26,7 +26,7 @@ list(
   # changements dans le fichier
   tar_target(
     name = path, # Cible
-    command = "data/data.txt", # Emplacement du fichier
+    command = working_directory, # Emplacement du fichier
     format = "file"
   ), 
   # La target suivante a "path" pour dépendance et importe les données. Sans
@@ -34,7 +34,7 @@ list(
   # modification des données n'entrainerait pas l'exécution du pipeline
   tar_target(
     name = data, # Cible pour l'objet de données
-    command = read.table(path) # Lecture des données
+    command = source("Nettoyage.R") # Lecture des données
   ),   
   tar_target(
     resultat_modele, # Cible pour le modèle 
