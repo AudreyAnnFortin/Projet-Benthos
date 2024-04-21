@@ -3,3 +3,6 @@
 #automatiser avec target
 #batir les figures
 #faire le rmarkdown
+
+#appel a la fonction source
+source("Nettoyage.R")
