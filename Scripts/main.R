@@ -15,10 +15,10 @@ library(targets)
 tar_option_set(packages = c("MASS", "igraph"))
 
 # Scripts R
-source("fonctions.R")
-source("Base de données.R")
+source("Data.R")
 source("Nettoyage.R")
 source("tables.R")
+source("Base de données.R")
 
 # Pipeline
 list(
@@ -34,14 +34,18 @@ list(
   # modification des données n'entrainerait pas l'exécution du pipeline
   tar_target(
     name = data, # Cible pour l'objet de données
-    command = source("Nettoyage.R") # Lecture des données
-  ),   
-  tar_target(
-    resultat_modele, # Cible pour le modèle 
-    mon_modele(data) # Exécution de l'analyse
+    command = fonct.script("Data.R") # Lecture des données
   ),
   tar_target(
-    figure, # Cible pour l'exécution de la figure
-    ma_figure(data, resultat_modele) # Réalisation de la figure
+    name = cleaning, # Cible pour nettoyer et corriger les données
+    command = fonct.script("Nettoyage.R") # Nettoyage des données
+  ),
+  tar_target(
+    name = tables, # Cible pour la formation des tables
+    command = fonct.script("tables.R")
+  ),
+  tar_target(
+    name = base_données, # Cible pour la formation d'une base de données
+    command = fonct.script("Base de données.R")
   )
 )
