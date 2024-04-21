@@ -1,5 +1,4 @@
-# Set the working directory
-setwd("E:/université/BIO500/projet/benthos")
+
 # Charge the RSQLite library
 library(RSQLite)
 # Connect to the data base
