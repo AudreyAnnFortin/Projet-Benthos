@@ -15,10 +15,10 @@ library(targets)
 tar_option_set(packages = c("MASS", "igraph"))
 
 # Scripts R
-source("Data.R")
-source("Nettoyage.R")
-source("tables.R")
-source("Base de données.R")
+source("Scripts/Data.R")
+source("Script/Nettoyage.R")
+source("Script/tables.R")
+source("Script/Base de données.R")
 
 # Pipeline
 list(
