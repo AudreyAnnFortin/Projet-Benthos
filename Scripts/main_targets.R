@@ -17,9 +17,9 @@ tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afi
 
 # Scripts R/fonctions nécessaires pour le target
 source("Scripts/Data.R")
-source("Script/Nettoyage.R")
-source("Script/tables.R")
-source("Script/Base de données.R")
+source("Scripts/Nettoyage.R")
+source("Scripts/tables.R")
+source("Scripts/Base de données.R")
 
 # Pipeline
 list(
