@@ -1,6 +1,6 @@
 #Authors: Amélie Garnier, Audrey-Ann Fortin and Myriam Marentette
 
-Nettoyage<- function() { 
+Nettoyage<- function(data) { 
 # Loop through each data frame in data_list
 for (file_name in names(data_list)) {
   # Get the data frame

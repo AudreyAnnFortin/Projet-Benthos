@@ -30,7 +30,7 @@ list(
     command = setwd("./Données"), # Emplacement du fichier
     format = "file"
   ), 
-  # La target suivante a "path" pour dépendance et importe les données. Sans
+  # La target suivante a "path" pour dépendance et importe les donnees. Sans
   # la séparation de ces deux étapes, la dépendance serait brisée et une
   # modification des données n'entrainerait pas l'exécution du pipeline
   tar_target(
@@ -38,15 +38,15 @@ list(
     command = Data(path) # Lecture des données
   ),
   tar_target(
-    name = cleaning, # Cible pour nettoyer et corriger les données
-    command = Nettoyage() # Nettoyage des données
+    name = cleaning, # Cible pour nettoyer et corriger les donnees
+    command = Nettoyage(data) # Nettoyage des données
   ),
   tar_target(
     name = tables, # Cible pour la formation des tables
     command = tables(cleaning) #Création des tables
   ),
   tar_target(
-    name = base_données, # Cible pour la formation d'une base de données
-    command = fonct.script("Base de données.R")
+    name = base_de_donnee, # Cible pour la formation d'une base de donnees
+    command = Base_de_donnee() #Formation de la base de donnee
   )
 )
