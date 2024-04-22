@@ -1,7 +1,6 @@
 #Authors: Amélie Garnier, Audrey-Ann Fortin and Myriam Marentette
-#Get the datas
-source("Data.R")
 
+tables<- function() {
 # Create a data frame to insert the different variables needed for the observation data frame
 observations <- data.frame(nom_sci = character(), site = character(), date_obs = as.Date(character()), abondance = numeric(), fraction = numeric())
 # Create a loop iterate over each file in data_list
@@ -38,3 +37,4 @@ for (file_name in names(data_list)) {
 }
 #put the data frame into a CSV file to be read into the data base
 write.csv(date_observed, "date_observed.csv",row.names=F)
+}

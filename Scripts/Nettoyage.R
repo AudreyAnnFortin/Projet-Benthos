@@ -1,6 +1,6 @@
 #Authors: Amélie Garnier, Audrey-Ann Fortin and Myriam Marentette
 
-
+Nettoyage<- function() { 
 # Loop through each data frame in data_list
 for (file_name in names(data_list)) {
   # Get the data frame
@@ -50,4 +50,5 @@ for (file_name in names(data_list)) {
   bent$temperature_eau_c <- as.numeric(bent$temperature_eau_c)
   # Update the data frame in data_list
   data_list[[file_name]] <- bent
+}
 }

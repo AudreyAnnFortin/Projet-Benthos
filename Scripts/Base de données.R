@@ -5,7 +5,7 @@ library(RSQLite)
 con <- dbConnect(SQLite(),dbname="benthos.db")
 
 
-#                 supprimer table pour la modifier
+# supprimer table pour la modifier
 #delete_cmnd <- 
 #  "DROP TABLE date_observed"
 #dbSendQuery(con, delete_cmnd)
