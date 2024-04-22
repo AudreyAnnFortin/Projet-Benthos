@@ -12,9 +12,10 @@ working_directory <- getwd()
 # ===========================================
 # Dépendances
 library(targets)
-tar_option_set(packages = c("MASS", "igraph"))
+library(tarchetypes) #Pour rendre le rapport (tar_render)
+tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afin d'obtenir le rapport final
 
-# Scripts R
+# Scripts R/fonctions nécessaires pour le target
 source("Scripts/Data.R")
 source("Script/Nettoyage.R")
 source("Script/tables.R")
@@ -38,11 +39,11 @@ list(
   ),
   tar_target(
     name = cleaning, # Cible pour nettoyer et corriger les données
-    command = fonct.script("Nettoyage.R") # Nettoyage des données
+    command = Nettoyage() # Nettoyage des données
   ),
   tar_target(
     name = tables, # Cible pour la formation des tables
-    command = fonct.script("tables.R")
+    command = tables(cleaning) #Création des tables
   ),
   tar_target(
     name = base_données, # Cible pour la formation d'une base de données

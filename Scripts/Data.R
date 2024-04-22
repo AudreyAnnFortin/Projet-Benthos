@@ -14,5 +14,5 @@ for (file in csv_files) {
   data_list[[file_name]] <- data
 }
 }
-
+ 
 # Now, data_list contains data frames from all CSV files in the directory
