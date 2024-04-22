@@ -26,7 +26,7 @@ list(
   # changements dans le fichier
   tar_target(
     name = path, # Cible
-    command = working_directory, # Emplacement du fichier
+    command = setwd("./Données"), # Emplacement du fichier
     format = "file"
   ), 
   # La target suivante a "path" pour dépendance et importe les données. Sans
@@ -34,7 +34,7 @@ list(
   # modification des données n'entrainerait pas l'exécution du pipeline
   tar_target(
     name = data, # Cible pour l'objet de données
-    command = fonct.script("Data.R") # Lecture des données
+    command = Data(path) # Lecture des données
   ),
   tar_target(
     name = cleaning, # Cible pour nettoyer et corriger les données

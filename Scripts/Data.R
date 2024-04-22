@@ -1,6 +1,6 @@
-Data<- function() {
+Data<- function(path) {
 # Get a list of all CSV files in the directory
-csv_files <- list.files(getwd(), pattern = "\\.csv$", full.names = TRUE)
+csv_files <- list.files(path, pattern = "\\.csv$", full.names = TRUE)
 # Create an empty list to store data frames
 data_list <- list()
 
