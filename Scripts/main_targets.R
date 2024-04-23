@@ -47,6 +47,22 @@ list(
   ),
   tar_target(
     name = base_de_donnee, # Cible pour la formation d'une base de donnees
-    command = Base_de_donnee() #Formation de la base de donnee
+    command = Base_de_donnee() #Formation de la base de 
+  ),
+  tar_target(
+    name = figure_un , # Cible pour la création d'une première figure
+    command = ... #Création de la figure
+  ),
+  tar_target(
+    name = figure_deux , # Cible pour la création d'une deuxième figure
+    command = ... #Création de la figure
+  ),
+  tar_target(
+    name = figure_trois , # Cible pour la création d'une troisième figure
+    command = ... #Création de la figure
+  ),
+  tar_render( #Création du rapport
+    name = rapport, #Cible pour la création du rapport, le nom qui sera donné au document
+    path = "rapport/rapport.Rmd" #Chemin vers le rapport
   )
 )
