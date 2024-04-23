@@ -1,5 +1,5 @@
 
-Data <- function(directory_path) {
+Data <- function(directory_path = "./Données") {
   # Get a list of all CSV files in the directory
   csv_files <- list.files(directory_path, pattern = "^site_.*\\.csv$", full.names = TRUE)
   # Create an empty list to store data frames
@@ -18,7 +18,8 @@ Data <- function(directory_path) {
   return(data_list)
 }
 
-# Example usage:
-directory_path <- "C:/Users/myria/OneDrive - USherbrooke/BIO500/Projet-Benthos/Données"
-data_list <- Data(directory_path)
+# Load the data from the default directory
+data_list <- Data()
+
+# Print the data list
 print(data_list)
