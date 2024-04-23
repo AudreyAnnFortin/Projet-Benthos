@@ -5,10 +5,10 @@ con <- dbConnect(SQLite(),dbname="benthos.db")
 
 
 # supprimer table pour la modifier
-delete_cmnd <- 
-  "DROP TABLE date_observed"
-dbSendQuery(con, delete_cmnd)
-dbListTables(con)
+#delete_cmnd <- 
+#  "DROP TABLE observations"
+#dbSendQuery(con, delete_cmnd)
+#dbListTables(con)
 
 
 # Creation of the table observation

@@ -38,3 +38,5 @@ for (file_name in names(data_list)) {
 #put the data frame into a CSV file to be read into the data base
 write.csv(date_observed, "date_observed.csv",row.names=F)
 }
+
+tables(data_list)
