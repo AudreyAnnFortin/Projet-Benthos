@@ -1,4 +1,4 @@
-
+setwd("Projet-Benthos/Données")
 # Charge the RSQLite library
 library(RSQLite)
 # Connect to the data base
@@ -6,20 +6,21 @@ con <- dbConnect(SQLite(),dbname="benthos.db")
 
 
 # supprimer table pour la modifier
-#delete_cmnd <- 
-#  "DROP TABLE date_observed"
-#dbSendQuery(con, delete_cmnd)
-#dbListTables(con)
+delete_cmnd <- 
+  "DROP TABLE observations"
+dbSendQuery(con, delete_cmnd)
+dbListTables(con)
 
 
 # Creation of the table observation
 creer_observation<-
   "CREATE TABLE observations (
-      nom_sci   VARCHAR(100) PRIMARY KEY,
+      nom_sci   VARCHAR(100),
       site      VARCHAR(100),
       date_obs  DATE,
       abondance REAL CHECK (abondance >= 0),
       fraction  REAL CHECK (fraction >= 0),
+      PRIMARY KEY (nom_sci, site, date_obs),
       FOREIGN KEY (site) REFERENCES site(site),
       FOREIGN KEY (date_obs) REFERENCES date_observed(date_obs)
   );"
@@ -55,7 +56,7 @@ creer_date_observed<-
 dbSendQuery(con, creer_date_observed)
 #get the datas to put them in the data base
 date_observed<- read.csv("date_observed.csv")
-dbWriteTable(con,append=TRUE,name='Observations dates',value=date_observed,row.names=FALSE)
+dbWriteTable(con,append=TRUE,name="date_observed",value=date_observed,row.names=FALSE)
 
 # disconnect from the data base
 dbDisconnect(con)
@@ -65,10 +66,11 @@ dbDisconnect(con)
 # Reconnect to the database
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
-# Query to select the first few rows from each table
-query_observations <- "SELECT * FROM observations LIMIT 5;"
-query_sites <- "SELECT * FROM sites LIMIT 5;"
-query_date_observed <- "SELECT * FROM date_observed LIMIT 5;"
+
+query_observations <- "SELECT COUNT(*) FROM observations;"
+query_sites <- "SELECT COUNT(*) FROM sites;"
+query_date_observed <- "SELECT COUNT(*) FROM date_observed;"
+
 
 # Execute the queries
 observations_result <- dbGetQuery(con, query_observations)
