@@ -1,4 +1,3 @@
-setwd("Projet-Benthos/Données")
 # Charge the RSQLite library
 library(RSQLite)
 # Connect to the data base
