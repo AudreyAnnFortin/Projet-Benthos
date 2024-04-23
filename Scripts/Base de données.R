@@ -61,7 +61,6 @@ dbWriteTable(con,append=TRUE,name="date_observed",value=date_observed,row.names=
 # disconnect from the data base
 dbDisconnect(con)
 
-----
   
 # Reconnect to the database
 con <- dbConnect(SQLite(), dbname = "benthos.db")
@@ -87,3 +86,4 @@ print(date_observed_result)
 
 # Disconnect from the database
 dbDisconnect(con)
+
