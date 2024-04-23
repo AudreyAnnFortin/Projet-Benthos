@@ -31,3 +31,4 @@ ggplot(data_merged, aes(x = month_year, fill = site)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotation des étiquettes de l'axe x pour une meilleure lisibilité
 
+dbDisconnect(con)
