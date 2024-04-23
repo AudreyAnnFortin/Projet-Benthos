@@ -10,7 +10,7 @@ query <- "SELECT nom_sci, abondance FROM observations"
 data_abondance <- dbGetQuery(con, query)
 
 # Charger les données de profondeur de la rivière depuis la base de données
-query <- "SELECT sites, profondeur_riviere FROM sites"
+query <- "SELECT site, profondeur_riviere FROM sites"
 data_profondeur <- dbGetQuery(con, query)
 
 # Fusionner les données d'abondance avec les données de profondeur
