@@ -7,7 +7,7 @@ con <- dbConnect(SQLite(),dbname="benthos.db")
 
 # supprimer table pour la modifier
 delete_cmnd <- 
-  "DROP TABLE observations"
+  "DROP TABLE sites"
 dbSendQuery(con, delete_cmnd)
 dbListTables(con)
 
@@ -29,20 +29,27 @@ dbSendQuery(con, creer_observation)
 observations<-read.csv("observations.csv")
 dbWriteTable(con,append=TRUE,name="observations",value=observations,row.names=FALSE)
 
-#Creation of the table site
-creer_site<-
-  "CREATE TABLE sites (
-      site                VARCHAR(100),
-      largeur_riviere     REAL,
-      profondeur_riviere  REAL,
-      vitesse_courant     REAL,
-      transparence_eau    REAL,
-      PRIMARY KEY         (site)
-);"
+# Create the sites table
+creer_site <- "CREATE TABLE sites (
+                site                VARCHAR(100),
+                largeur_riviere     REAL,
+                profondeur_riviere  REAL,
+                vitesse_courant     REAL,
+                transparence_eau    REAL,
+                PRIMARY KEY         (site)
+              );"
 dbSendQuery(con, creer_site)
-#get the datas to put them in the data base
-sites<- read.csv("sites.csv")
-dbWriteTable(con,append=TRUE,name="sites",value=sites,row.names=FALSE)
+
+# Read the CSV file for sites
+sites <- read.csv("sites.csv")
+
+# Handle duplicate site values
+duplicated_sites <- duplicated(sites$site)
+sites <- sites[!duplicated_sites, ]
+
+# Write the data to the sites table
+dbWriteTable(con, append = TRUE, name = "sites", value = sites, row.names = FALSE)
+
 
 # Creation of the table date_observed
 creer_date_observed<-
