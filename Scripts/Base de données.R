@@ -7,7 +7,7 @@ con <- dbConnect(SQLite(),dbname="benthos.db")
 
 # supprimer table pour la modifier
 delete_cmnd <- 
-  "DROP TABLE sites"
+  "DROP TABLE date_observed"
 dbSendQuery(con, delete_cmnd)
 dbListTables(con)
 
@@ -51,19 +51,24 @@ sites <- sites[!duplicated_sites, ]
 dbWriteTable(con, append = TRUE, name = "sites", value = sites, row.names = FALSE)
 
 
-# Creation of the table date_observed
-creer_date_observed<-
-  "CREATE TABLE date_observed (
-      date                VARCHAR(50),
-      date_obs            DATE,
-      heure_obs           VARCHAR(50),
-      temperature_eau_c   REAL,
-      PRIMARY KEY         (date_obs)
-);"
+# Create the date_observed table
+creer_date_observed <- "CREATE TABLE date_observed (
+                           date                VARCHAR(50),
+                           date_obs            DATE,
+                           heure_obs           VARCHAR(50),
+                           temperature_eau_c   REAL,
+                           PRIMARY KEY         (date_obs)
+                         );"
 dbSendQuery(con, creer_date_observed)
-#get the datas to put them in the data base
-date_observed<- read.csv("date_observed.csv")
-dbWriteTable(con,append=TRUE,name="date_observed",value=date_observed,row.names=FALSE)
+
+# Read the CSV file for date_observed
+date_observed <- read.csv("date_observed.csv")
+
+# Remove all but one occurrence of each duplicated date
+unique_date_observed <- date_observed[!duplicated(date_observed$date_obs), ]
+
+# Write the data to the date_observed table
+dbWriteTable(con, append = TRUE, name = "date_observed", value = unique_date_observed, row.names = FALSE)
 
 # disconnect from the data base
 dbDisconnect(con)
