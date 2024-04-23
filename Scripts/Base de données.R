@@ -35,7 +35,7 @@ creer_site<-
       largeur_riviere     REAL,
       profondeur_riviere  REAL,
       vitesse_courant     REAL,
-      transparence_eau    REAL
+      transparence_eau    REAL,
       PRIMARY KEY         (site)
 );"
 dbSendQuery(con, creer_site)
