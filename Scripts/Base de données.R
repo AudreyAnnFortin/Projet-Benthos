@@ -1,4 +1,4 @@
-Base_de_donnee<- function() {
+
 # Charge the RSQLite library
 library(RSQLite)
 # Connect to the data base
@@ -59,7 +59,6 @@ dbWriteTable(con,append=TRUE,name='Observations dates',value=date_observed,row.n
 
 # disconnect from the data base
 dbDisconnect(con)
-}
 
 ----
   
