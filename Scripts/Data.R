@@ -19,7 +19,4 @@ Data <- function(directory_path = "./Données") {
 }
 
 # Load the data from the default directory
-data_list <- Data()
-
-# Print the data list
-print(data_list)
+#data_list <- Data()
