@@ -25,8 +25,8 @@ Nettoyage <- function(data_list) {
     bent$abondance <- as.numeric(bent$abondance)
     
     if (file_name %in% c("site_133_101_R01_2018-09-07", "site_133_101_R01_2019-09-13")) {
-      print(paste("Converting 'abondance' for file:", file_name))
-      bent$abondance <- ifelse(bent$abondance < 0, abs(bent$abondance), bent$abondance)
+      print(paste("Converting 'abondance' for file:", file_name)) 
+      bent$abondance <- sapply(bent$abondance, abs)
     }
     
     bent$largeur_riviere <- as.numeric(bent$largeur_riviere)
