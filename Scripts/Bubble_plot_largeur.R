@@ -1,12 +1,10 @@
-# Charger les bibliothèques nécessaires
-library(RSQLite)
-library(ggplot2)
+
 
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
 # Charger les données d'abondance par espèce depuis la base de données
-query <- "SELECT nom_sci, abondance FROM observations"
+query <- "SELECT site, nom_sci, abondance FROM observations"
 data_abondance <- dbGetQuery(con, query)
 
 # Charger les données de profondeur de la rivière depuis la base de données
