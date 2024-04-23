@@ -1,6 +1,7 @@
-Data <- function(path) {
+
+Data <- function(directory_path) {
   # Get a list of all CSV files in the directory
-  csv_files <- list.files(path, pattern = "^site_.*\\.csv$", full.names = TRUE)
+  csv_files <- list.files(directory_path, pattern = "^site_.*\\.csv$", full.names = TRUE)
   # Create an empty list to store data frames
   data_list <- list()
   
@@ -17,12 +18,7 @@ Data <- function(path) {
   return(data_list)
 }
 
-# Call the Data function to populate data_list
-data_list <- Data("C:/Users/myria/OneDrive - USherbrooke/BIO500/Projet-Benthos/Données")
-
-# Print out the contents of data_list
+# Example usage:
+directory_path <- "C:/Users/myria/OneDrive - USherbrooke/BIO500/Projet-Benthos/Données"
+data_list <- Data(directory_path)
 print(data_list)
-
-# Or simply type the name of the variable in the console
-data_list
-
