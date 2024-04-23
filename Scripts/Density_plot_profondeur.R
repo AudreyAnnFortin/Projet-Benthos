@@ -5,23 +5,17 @@ library(ggplot2)
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
-# Charger les données d'abondance par espèce depuis la base de données
-query <- "SELECT nom_sci, abondance FROM observations"
-data_abondance <- dbGetQuery(con, query)
-
-# Charger les données de profondeur de la rivière depuis la base de données
-query <- "SELECT site, profondeur_riviere FROM sites"
-data_profondeur <- dbGetQuery(con, query)
-
-# Fusionner les données d'abondance avec les données de profondeur
-data_merged <- merge(data_abondance, data_profondeur, by = "site")
+query <- "
+  SELECT sites.profondeur_riviere, observations.nom_sci, observations.abondance
+  FROM sites
+  INNER JOIN observations ON sites.site = observations.site
+"
+data <- dbGetQuery(con, query)
 
 # Créer le density plot avec ggplot2
-ggplot(data_merged, aes(x = profondeur_riviere, y = abondance)) +
-  geom_point(alpha = 0.4) +  # Points avec transparence
-  geom_density_2d() +  # Density plot
-  labs(x = "Profondeur de la rivière", y = "Abondance") +  # Titres des axes
-  ggtitle("Density plot de l'abondance par espèce en fonction de la profondeur de la rivière") +  # Titre du plot
-  theme_minimal()  # Style du plot
+ggplot(data, aes(x = profondeur_riviere, fill = nom_sci)) +
+  geom_density(alpha = 0.5) +
+  labs(x = "Profondeur de la rivière", y = "Densité", fill = "Nom scientifique") +
+  theme_minimal()
 
 dbDisconnect(con)
