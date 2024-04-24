@@ -58,7 +58,9 @@ abondance <- function() {
          fill = "Espèce") +
     scale_fill_brewer(palette = "Set3") +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+          panel.background = element_rect(fill = "white"), # Change the background to white
+          text = element_text(color = "white")) # Change text color to white
   
   # Disconnect from the database
   dbDisconnect(con)

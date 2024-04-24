@@ -27,6 +27,7 @@ profondeur <- function() {
     geom_point(alpha = 0.7) +
     scale_size_continuous(range = c(3, 10)) +
     labs(x = "Profondeur de la rivière", y = "Densité") +
+    ggtitle("Densité des espèces en fonction de la profondeur de la rivière") +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
   
   dbDisconnect(con)

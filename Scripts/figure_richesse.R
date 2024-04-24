@@ -23,7 +23,10 @@ richesse <- function() {
          y = "Nombre d'espèces totales observées") +
     scale_fill_brewer(palette = "Set3") +  # Choix d'une palette de couleurs
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") # Rotation des étiquettes de l'axe x pour une meilleure lisibilité et suppression de la légende
+    theme(panel.background = element_rect(fill = "white"),  # Changer le fond du panel en blanc
+          axis.text.x = element_text(angle = 45, hjust = 1), 
+          legend.position = "none",  # Rotation des étiquettes de l'axe x pour une meilleure lisibilité et suppression de la légende
+          text = element_text(color = "white"))  # Changer la couleur du texte en blanc
   
   dbDisconnect(con)
   

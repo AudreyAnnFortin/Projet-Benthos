@@ -18,8 +18,10 @@ largeur <- function() {
     geom_point(alpha = 0.6) +  # Points avec transparence
     scale_size_continuous(range = c(3, 10)) +  # Définir la plage de tailles des bulles
     labs(x = "Largeur de la rivière", y = "Abondance") +  # Titres des axes
-    ggtitle("Bubble plot de l'abondance en fonction de la largeur de la rivière") +  # Titre du plot
-    theme_minimal()  # Style du plot
+    ggtitle("L'abondance en espèces en fonction de la largeur de la rivière") +  # Titre du plot
+    theme_minimal() +  # Style du plot
+    theme(panel.background = element_rect(fill = "white"),  # Changer le fond du panel en blanc
+          text = element_text(color = "white"))  # Changer la couleur du texte en blanc pour la légende, le titre et les axes
   
   # Déconnecter de la base de données
   dbDisconnect(con)
