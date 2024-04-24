@@ -1,4 +1,4 @@
-
+largeur <- function() {
 
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
@@ -23,3 +23,4 @@ ggplot(data_merged, aes(x = largeur_riviere, y = abondance, size = abondance)) +
   theme_minimal()  # Style du plot
 
 dbDisconnect(con)
+}
