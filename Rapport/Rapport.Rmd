@@ -10,42 +10,15 @@ address:
   - code: a
     address: Université de Sherbrooke
   
-corresponding_author:
-  code: 2
-  text: "To whom correspondence should be addressed. E-mail: bob@email.com"
-
 # For footer text
 lead_author_surname: Anonymous
-
-## Remove this if not required    
-equal_authors:
-  code: 1
-  text: "A.O.(Author One) and A.T. (Author Two) contributed equally to this work (remove if not applicable)."
-
-
-author_contributions: |
-  Please provide details of author contributions here.
-
-## Remove this if not required
-conflict_of_interest: |
-  Please declare any conflict of interest here.
-
-Résumé: |
-  Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a unn impact important car on peut alors étudier l'impact de d'autres facteurs sur les populations de différentes espèces, puisqu'on connait leur distribution dans le temps et l'espace. On peut aussi prévoir quelles espèces seront présentes sur un nouveau site d'étude
-
-
-significance: |
-  Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the Significance Statement is to explain the relevance of the work in broad context to a broad readership. The Significance Statement appears in the paper itself and is required for all research papers.
-
-acknowledgements: |
-  Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
 
 keywords:
   - Macroinvertébrés
   - Qualité de l'eau
-  - optional
-  - optional
-  - optional
+  - Benthos
+  - Inventaire
+  - Rivière
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
@@ -63,57 +36,29 @@ output: rticles::pnas_article
 Résumé {.unnumbered}
 ========================================
 
-Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a un impact important car on peut alors étudier l'impact de d'autres facteurs sur les populations de différentes espèces, puisqu'on connait leur distribution dans le temps et l'espace. On peut aussi prévoir quelles espèces seront présentes sur un nouveau site d'étude
+ Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a un impact important car on peut alors étudier l'impact de d'autres facteurs, comme le réchauffement climatique, les nutriments disponibles et la pollution, sur les populations des espèces puisqu'on connait leur distribution dans le temps et l'espace. 
 
 Introduction {.unnumbered}
 ====================================
-Notre étude vise à déterminer si la profondeur d'un site d'observation avait un impact sur le type d'organisme qu'on y retrouve. Nous voulons aussi explorer la variation de la présence des différents taxons à l'étude selon le temps de l'année
+Les communautés de macroinvertébrés peuvent être utilisées comme indicateur permettant permet d'avoir une idée de la santé de l'écosystème aquatique étudié. Les macroinvertébrés sont un échelon essentiel du réseau trophique des rivières, nourrissant poissons, oiseaux et d'amphibiens. Leur abondance peut donc donner une idée de l'état du plan d'eau. @guide2013 Avec les changements climatiques et la pollution, l'environnement change, ce qui peut bouleverser l'écosystème aquatique entier. La densité de microinvertébrés peut varier entres autres en fonction de la quantité de nutriments disponibles, du type de nutriments et du taux d'oxygène dans l'eau. L'étude des macroinvertéprés peut donc aussi être un indicateur d'eutrophisation. @ponds2017 Notre étude vise à déterminer si la profondeur d'un site d'observation a un imact sur le type d'organisme qu'on y retrouve. Nous voulons aussi explorer la variation de la présence des différents taxons à l'étude selon le temps de l'année. Ces connaissance pourront servir à d'autres études visant à des projections dans les changements de réseau trophiques et prévoir quelles espèces seront présentes sur un nouveau site d'étude.
 
 Méthode {.unnumbered}
 =======================================
-Les inventaires du benthos sont réalisés à l'aide d'un filet à mailles fines (D-net) qui est traîné sur le fond de la rivière à trois reprises. L'effort d'échantillonnage est de 3m². Les échantillons sont ensuite ramenés en laboratoire et étalés sur des plateaux de tri « Bogorov » où les espèces sont identifiées et dénombrées. Seule une portion (fraction) de l'échantillon est analysée. L'abondance des espèces est calculée en fonction de la quantité d'individus trouvés dans l'échantillon et de la fraction analysée. Pour le traitement des données, nous avons procédé à un nettoyage de toutes les données recueillies, s'assurant qu'elles étaient exemptes d'erreurs. Nous les avons ensuite rassembée dans une seule grande base de donnée, dont nous nous sommes servi pour analyser la distribution des espèces grâce à différents types de graphiques.
+Les inventaires du benthos sont réalisés à l'aide d'un filet à mailles fines (D-net) qui est traîné sur le fond de la rivière à trois reprises. L'effort d'échantillonnage est de 3m². Les échantillons sont ensuite ramenés en laboratoire et étalés sur des plateaux de tri « Bogorov » où les espèces sont identifiées et dénombrées. Seule une portion (fraction) de l'échantillon est analysée. L'abondance des espèces est calculée en fonction de la quantité d'individus trouvés dans l'échantillon et de la fraction analysée. @protocole2011 Pour le traitement des données, nous avons procédé à un nettoyage de toutes les données recueillies, s'assurant qu'elles étaient exemptes d'erreurs. Nous les avons ensuite rassembée dans une seule grande base de donnée, dont nous nous sommes servi pour analyser la distribution des espèces grâce à différents types de graphiques.
 
 Résultats {.unnumbered}
 =========================
 blablabla
 
-```{r figs, fig.cap="\\label{fig1}"}
-
-figure_un<- tar_read(figure_un)
-
-abline(figure_un)
-
-```
 
 La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
-
-```{r figs, fig.cap="\\label{fig2}"}
-
-figure_deux<-tar_read(figure_deux)
-
-abline(figure_deux)
-```
 
 
 La seconde figure présente -----
 
-```{r figs, fig.cap="\\label{fig3}"}
-
-figure_trois<-tar_read(figure_trois)
-
-abline(figure_trois)
-```
-
 La troisième figure -----
 
-```{r figs, fig.cap="\\label{fig4}"}
 
-figure_quatre<-tar_read(figure_quatre)
-
-abline(figure_quatre)
-```
-
-La quatrième figure -----
 
 Format {#format .unnumbered}
 ------
@@ -141,7 +86,7 @@ References {#references .unnumbered}
 
 References should be cited in numerical order as they appear in text;
 this will be done automatically via bibtex, e.g. @belkin2002using and
-@berard1994embedding [@coifman2005geometric]. All references, including
+@guide2013. All references, including
 for the SI, should be included in the main manuscript file. References
 appearing in both sections should not be duplicated. SI references
 included in tables should be included with the main reference section.
