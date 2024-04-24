@@ -1,6 +1,14 @@
 # ===========================================
 # _targets.R file
 # ===========================================
+# Dépendances
+library(dplyr)
+library(RSQLite)
+library(ggplot2)
+library(targets)
+library(tarchetypes) #Pour rendre le rapport (tar_render)
+tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afin d'obtenir le rapport final
+
 # Scripts R/fonctions nécessaires pour le target
 source("Scripts/Data.R")
 source("Scripts/Nettoyage.R")
@@ -11,13 +19,6 @@ source("Scripts/figure_abondance_relative.R")
 source("Scripts/Bubble_plot_largeur.R")
 source("Scripts/Density_plot_profondeur.R")
 
-# Dépendances
-library(dplyr)
-library(RSQLite)
-library(ggplot2)
-library(targets)
-library(tarchetypes) #Pour rendre le rapport (tar_render)
-tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afin d'obtenir le rapport final
 # Pipeline
 list(
   # Une target pour le chemin du fichier de donnée permet de suivre les 
