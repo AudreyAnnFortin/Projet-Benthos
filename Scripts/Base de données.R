@@ -4,11 +4,11 @@ Base_de_donnee <- function(){
   
   
   # supprimer table pour la modifier
-  #delete_cmnd <- 
-  #  "DROP TABLE observations"
-  #dbSendQuery(con, delete_cmnd)
-  #dbListTables(con)
-  
+delete_cmnd <- 
+  "DROP TABLE observations"
+  dbSendQuery(con, delete_cmnd)
+  dbListTables(con)
+
   
   # Creation of the table observation
   creer_observation<-
@@ -26,6 +26,12 @@ Base_de_donnee <- function(){
   #get the datas to put them in the data base
   observations<-read.csv("observations.csv")
   dbWriteTable(con,append=TRUE,name="observations",value=observations,row.names=FALSE)
+  
+  # supprimer table pour la modifier
+  delete_cmnd <- 
+    "DROP TABLE sites"
+  dbSendQuery(con, delete_cmnd)
+  dbListTables(con)
   
   # Create the sites table
   creer_site <- "CREATE TABLE sites (
@@ -47,8 +53,13 @@ Base_de_donnee <- function(){
   
   # Write the data to the sites table
   dbWriteTable(con, append = TRUE, name = "sites", value = sites, row.names = FALSE)
-  
-  
+
+  # supprimer table pour la modifier
+  delete_cmnd <- 
+    "DROP TABLE date_observed"
+  dbSendQuery(con, delete_cmnd)
+  dbListTables(con)
+    
   # Create the date_observed table
   creer_date_observed <- "CREATE TABLE date_observed (
                            date                VARCHAR(50),
