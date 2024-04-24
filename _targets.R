@@ -39,8 +39,8 @@ list(
     command = Nettoyage(data) # Nettoyage des données
   ),
   tar_target(
-    name = table, # Cible pour la formation des tables
-    command = table(cleaning) #Création des tables
+    name = tabl, # Cible pour la formation des tables
+    command = tabl(cleaning) #Création des tables
   ),
   tar_target(
     name = base_de_donnee, # Cible pour la formation d'une base de donnees
@@ -64,6 +64,6 @@ list(
   ),
   tar_render( #Création du rapport
     name = rapport , #Cible pour la création du rapport, le nom qui sera donné au document
-    path = "Rapport/rapport.Rmd" #Chemin vers le rapport
+    path = "rapport_benthos.Rmd" #Chemin vers le rapport
   )
 )

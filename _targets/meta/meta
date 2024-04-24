@@ -1,28 +1,24 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-abondance|function|5ed68f63bbf86d89|||||||||||||||
-base_de_donnee|stem||07770e0907567e48|12fcddf58ca1219d|1351468164||t19837.0554490696s||0|rds|local|vector|||0.14|Closing open result set, pending rows. impossible douvrir le fichier observations.csv  No such file or directory|impossible douvrir la connexion
-Base_de_donnee|function|d81096d8b827f809|||||||||||||||
 data|stem|3b8708b1c4f300f2|471f4c50e8eb2dc6|2c530c1562a7fbd1|33550471||t19837.054314763s|681f28a9fc54e23b|451|rds|local|vector|||0||
-Data|function|81af431048f357c2|||||||||||||||
 data_summary|stem|f3c53ff9bd6ddbe0|2e4ea7419356bab6|31c90c64df4f1b11|-651121042||t19837.0543150917s|96f99064b4288aae|87|rds|local|vector|||0||
-figure_deux|stem|b4fb00f320ed46a6|464a28efe147ca92|bf9c20f89d11df63|716313680||t19837.0554482338s|ba41eabafff2540f|48|rds|local|vector|||0.03||
-figure_quatre|stem|b4fb00f320ed46a6|bbaf9f5a8e919aa6|aff0968caa33a85f|1773676908||t19837.0553851135s|ba41eabafff2540f|48|rds|local|vector|||0.08||
-figure_un|stem|b4fb00f320ed46a6|5964aed04c661bce|4a7a2ef3cf3771f0|893032093||t19837.0553878423s|ba41eabafff2540f|48|rds|local|vector|||0.18||
-largeur|function|ab7fec6ca0d44017|||||||||||||||
-Nettoyage|function|2479730d3db6730f|||||||||||||||
-profondeur|function|865ecd1d10320129|||||||||||||||
-rapport|stem|68375cf6539ab5c0|2b768077d8dbb0a2|2c530c1562a7fbd1|-1266156412|Rapport/rapport.pdf*Rapport/rapport.Rmd|t19837.0554471762s|d9b10398a96a9f99|356696|file|local|vector|||5.16|Package sidecap Warning Package ragged2e not found  expect bad formatting.. Package microtype Warning Unable to apply patch eqnum on input line 93.|
-richesse|function|52b31689d9dc7c55|||||||||||||||
 summarize_data|function|dc619228d9319364|||||||||||||||
-Data|function|8c563c638a670af1
-abondance|function|6da843fa6985ee11
-Nettoyage|function|37ae84def5ac2909
-Base_de_donnee|function|c66f575f56feeaa3
-richesse|function|79798a5b4b02cc55
-profondeur|function|0f7187c698e41200
-largeur|function|1baa3f01ce2871a3
-figure_quatre|stem|47d71c81f458fb17|c1eead08e6770cf7|04ae21c0801769b2|1773676908||t19837.0753082718s|ac45463db19e2cbe|48|rds|local|vector|||0.13|le package rmarkdown a été compilé avec la version R 4.3.3. le package knitr a été compilé avec la version R 4.3.3|
-figure_un|stem|47d71c81f458fb17|2c6c98abd8b2acd2|3f8d46c8e3d0a16c|893032093||t19837.0753107695s|ac45463db19e2cbe|48|rds|local|vector|||0.19||
-figure_deux|stem|47d71c81f458fb17|93533ea2356f3b13|ce2d509ef3d4a72a|716313680||t19837.0753113792s|ac45463db19e2cbe|48|rds|local|vector|||0.03||
 figure_trois|stem|47d71c81f458fb17|82b81de26e854ba2|3fbc3f9f624774c1|-1786344137||t19837.0753119824s|ac45463db19e2cbe|48|rds|local|vector|||0.05||
-base_de_donnee|stem|47d71c81f458fb17|8bc307a5f379a3de|f66e225721986f35|1351468164||t19837.0753156625s|ac45463db19e2cbe|48|rds|local|vector|||0.31|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|
+Data|function|81af431048f357c2|||||||||||||||
+abondance|function|5ed68f63bbf86d89|||||||||||||||
+Nettoyage|function|2479730d3db6730f|||||||||||||||
+Base_de_donnee|function|d81096d8b827f809|||||||||||||||
+richesse|function|52b31689d9dc7c55|||||||||||||||
+profondeur|function|865ecd1d10320129|||||||||||||||
+largeur|function|ab7fec6ca0d44017|||||||||||||||
+figure_quatre|stem|b4fb00f320ed46a6|bbaf9f5a8e919aa6|aff0968caa33a85f|1773676908||t19837.0874929479s|ba41eabafff2540f|48|rds|local|vector|||0.09||
+figure_un|stem|b4fb00f320ed46a6|5964aed04c661bce|4a7a2ef3cf3771f0|893032093||t19837.0874951012s|ba41eabafff2540f|48|rds|local|vector|||0.17||
+rapport|stem|bc4077f7392fd401|472dee2031b3603c|2c530c1562a7fbd1|-1266156412|rapport_benthos.html*rapport_benthos.Rmd|t19837.087512794s|a4b7ebeef0014b6a|640831|file|local|vector|||1.59||
+figure_deux|stem|b4fb00f320ed46a6|464a28efe147ca92|bf9c20f89d11df63|716313680||t19837.0875145446s|ba41eabafff2540f|48|rds|local|vector|||0.06||
+base_de_donnee|stem|b4fb00f320ed46a6|07770e0907567e48|12fcddf58ca1219d|1351468164||t19837.0875172168s|ba41eabafff2540f|48|rds|local|vector|||0.22|Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows. Closing open result set, pending rows|
+Data|function|81af431048f357c2
+abondance|function|5ed68f63bbf86d89
+Nettoyage|function|2479730d3db6730f
+Base_de_donnee|function|d81096d8b827f809
+richesse|function|52b31689d9dc7c55
+profondeur|function|865ecd1d10320129
+largeur|function|ab7fec6ca0d44017

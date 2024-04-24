@@ -1,6 +1,6 @@
 #Authors: Amélie Garnier, Audrey-Ann Fortin and Myriam Marentette
 
-table<- function(data_list) {
+tabl<- function(data_list) {
 # Create a data frame to insert the different variables needed for the observation data frame
 observations <- data.frame(nom_sci = character(), site = character(), date_obs = as.Date(character()), abondance = numeric(), fraction = numeric())
 # Create a loop iterate over each file in data_list
