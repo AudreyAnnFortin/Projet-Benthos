@@ -17,6 +17,3 @@ Data <- function(directory_path = "./Données") {
   # Return the populated data_list
   return(data_list)
 }
-
-# Load the data from the default directory
-data_list <- Data()
