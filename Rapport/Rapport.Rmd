@@ -48,129 +48,24 @@ Les inventaires du benthos sont réalisés à l'aide d'un filet à mailles fines
 
 Résultats {.unnumbered}
 =========================
-blablabla
+
+![figure1. \label{fig1}]("/Users/sylvie/Desktop/BIO500/Projet-Benthos-main/Projet-Benthos/RAPPORT/figures/figure_un.png"){width=50% height=40%}
 
 
-La première figure montre l'a courbe'histogramme du nombre d'espèces observées par années. On remarque que malgré une certaine variation, le nombre d'espèce semble se maintenir deuis 2016, ce qui est bon signe. Si les macroinvertébrés sont toujours présents, c'est que le réseau trophique n'est pas trop touché par les changements environnementaux pour le moment.
-
-La seconde figure montre l'abondance relative par espèce selon l'année d'observation. On peut donc voir quelles sont les espèces les plus présentes chaque année et la proportion qu'elles occupent parmis la biodiversité totale des macrocrustacés. On observe au fil des années une augmentation de la population de Tanytarsini, et une diminution de Rhithrogena. Cela peut être dû aux changements environnementaux qui peuvent avantager certains organismes et nuire à d'autres.
-
-La troisième figure montre l'abondance d'espèces selon la largeur de la rivière. On obserbe que plus la rivière est étroite, plus nombreuses sont les espèces observées. Il semble y avoir un reguain dans la quantité d'espèces quand la rivière a une largeur de 80m. Il se peut toutefois que cela soit dû à une erreur.
-
-La dernière figulre, la quatrième, présente la densité des populations de chaque espèces selon cette foi la profondeur de la rivière. Encore une fois, moins elle est profonce, plus nombreux sont les organismes. On observe ici aussi un deuxième pic, à 30, et cela peut être dû à la même erreur.
+La première Figure \ref{fig:fig1}.  montre l'a courbe'histogramme du nombre d'espèces observées par années. On remarque que malgré une certaine variation, le nombre d'espèce semble se maintenir deuis 2016, ce qui est bon signe. Si les macroinvertébrés sont toujours présents, c'est que le réseau trophique n'est pas trop touché par les changements environnementaux pour le moment.
 
 
-La seconde figure présente -----
+![figure2. \label{fig2}]("/Users/sylvie/Desktop/BIO500/Projet-Benthos-main/Projet-Benthos/RAPPORT/figures/figure_deux.png"){width=50% height=40%}
 
-La troisième figure -----
+La Figure \ref{fig:fig2}. montre l'abondance relative par espèce selon l'année d'observation. On peut donc voir quelles sont les espèces les plus présentes chaque année et la proportion qu'elles occupent parmis la biodiversité totale des macrocrustacés. On observe au fil des années une augmentation de la population de Tanytarsini, et une diminution de Rhithrogena. Cela peut être dû aux changements environnementaux qui peuvent avantager certains organismes et nuire à d'autres.
 
+![figure3. \label{fig3}]("/Users/sylvie/Desktop/BIO500/Projet-Benthos-main/Projet-Benthos/RAPPORT/figures/figure_trois.png"){width=50% height=40%}
 
+La Figure \ref{fig:fig3}. montre l'abondance d'espèces selon la largeur de la rivière. On obserbe que plus la rivière est étroite, plus nombreuses sont les espèces observées. Il semble y avoir un reguain dans la quantité d'espèces quand la rivière a une largeur de 80m. Il se peut toutefois que cela soit dû à une erreur.
 
-Single column equations {#single-column-equations .unnumbered}
------------------------
+![figure4. \label{fig4}]("/Users/sylvie/Desktop/BIO500/Projet-Benthos-main/Projet-Benthos/RAPPORT/figures/figure_quatre.png"){width=50% height=40%}
 
-Authors may use 1- or 2-column equations in their article, according to
-their preference.
-
-To allow an equation to span both columns, options are to use the
-`\begin{figure*}...\end{figure*}` environment mentioned above for
-figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \[eqn:example\] below.
-
-Please note that this option may run into problems with floats and
-footnotes, as mentioned in the [cuted package
-documentation](http://texdoc.net/pkg/cuted). In the case of problems
-with footnotes, it may be possible to correct the situation using
-commands `\footnotemark` and `\footnotetext`.
-
-$$\begin{aligned}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \label{eqn:example} \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-\end{aligned}$$
-
-
-
-<!-- pandoc writes all tables using longtable, which fails in 2-column mode
-
-  Species                    CBS     CV     G3
-  ----------------------- ------ ------ ------
-  1\. Acetaldehyde           0.0    0.0    0.0
-  2\. Vinyl alcohol          9.1    9.6   13.5
-  3\. Hydroxyethylidene     50.8   51.2   54.0
-
-  : Comparison of the fitted potential energy surfaces and ab initio
-  benchmark electronic energy calculations
-
--->
-
-Supporting Information (SI) {#supporting-information-si .unnumbered}
----------------------------
-
-
-The main text of the paper must stand on its own without the SI. Refer
-to SI in the manuscript at an appropriate point in the text. Number
-supporting figures and tables starting with S1, S2, etc. Authors are
-limited to no more than 10 SI files, not including movie files. Authors
-who place detailed materials and methods in SI must provide sufficient
-detail in the main text methods to enable a reader to follow the logic
-of the procedures and results and also must reference the online
-methods. If a paper is fundamentally a study of a new method or
-technique, then the methods must be described completely in the main
-text. Because PNAS edits SI and composes it into a single PDF, authors
-must provide the following file formats only.
-
-### SI Text {#si-text .unnumbered}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference).
-
-### SI Figures {#si-figures .unnumbered}
-
-Provide a brief legend for each supporting figure after the supporting
-text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or
-GIF format; figures may not be embedded in manuscript text. When saving
-TIFF files, use only LZW compression; do not use JPEG compression. Do
-not save figure numbers, legends, or author names as part of the image.
-Composite figures must be pre-assembled.
-
-### 3D Figures {#d-figures .unnumbered}
-
-Supply a composable U3D or PRC file so that it may be edited and
-composed. Authors may submit a PDF file but please note it will be
-published in raw format and will not be edited or composed.
-
-### SI Tables {#si-tables .unnumbered}
-
-Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
-PDF with the same file name for visual reference); include only one
-table per file. Do not use tabs or spaces to separate columns in Word
-tables.
-
-### SI Datasets {#si-datasets .unnumbered}
-
-Supply Excel (.xls), RTF, or PDF files. This file type will be published
-in raw format and will not be edited or composed.
-
-### SI Movies {#si-movies .unnumbered}
-
-Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media
-(wmv), animated GIF (gif), or MPEG files and submit a brief legend for
-each movie in a Word or RTF file. All movies should be submitted at the
-desired reproduction size and length. Movies should be no more than 10
-MB in size.
-
-### Still images {#still-images .unnumbered}
-
-Authors must provide a still image from each video file. Supply TIFF,
-EPS, high-resolution PDF, JPEG, or GIF files.
-
-### Appendices {#appendices .unnumbered}
-
-PNAS prefers that authors submit individual source files to ensure
-readability. If this is not possible, supply a single PDF file that
-contains all of the SI associated with the paper. This file type will be
-published in raw format and will not be edited or composed.
+La dernière figulre, la Figure \ref{fig:fig4}., présente la densité des populations de chaque espèces selon cette foi la profondeur de la rivière. Encore une fois, moins elle est profonce, plus nombreux sont les organismes. On observe ici aussi un deuxième pic, à 30, et cela peut être dû à la même erreur.
 
 
 <!-- Leave these lines as they are at the end of your .Rmd file to ensure placement of methods & acknowledgements sections before the references-->
