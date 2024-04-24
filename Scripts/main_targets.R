@@ -73,7 +73,7 @@ list(
     command = profondeur() #Création de la figure
   ),
   tar_render( #Création du rapport
-    name = rapport, #Cible pour la création du rapport, le nom qui sera donné au document
+    name = rapport , #Cible pour la création du rapport, le nom qui sera donné au document
     path = "rapport/rapport.Rmd" #Chemin vers le rapport
   )
 )
