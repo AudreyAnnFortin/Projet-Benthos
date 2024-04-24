@@ -19,51 +19,55 @@ source("Scripts/figure_abondance_relative.R")
 source("Scripts/Bubble_plot_largeur.R")
 source("Scripts/Density_plot_profondeur.R")
 
+# Full path to the directory
+full_path <- "C:/Users/myria/OneDrive - USherbrooke/BIO500/Projet-Benthos"
+
+# Extract the last part of the path
+project_name <- basename(full_path)
+
+# Display the extracted project name
+print(project_name)
+
 # Pipeline
 list(
-  # Une target pour le chemin du fichier de donnée permet de suivre les 
-  # changements dans le fichier
   tar_target(
-    name = path, # Cible
-    command = setwd("./Données"), # Emplacement du fichier
-  ), 
-  # La target suivante a "path" pour dépendance et importe les donnees. Sans
-  # la séparation de ces deux étapes, la dépendance serait brisée et une
-  # modification des données n'entrainerait pas l'exécution du pipeline
-  tar_target(
-    name = data, # Cible pour l'objet de données
-    command = Data(path) # Lecture des données
+    name = path,
+    command = setwd(full_path)  # Set working directory to the full path
   ),
   tar_target(
-    name = cleaning, # Cible pour nettoyer et corriger les donnees
-    command = Nettoyage(data) # Nettoyage des données
+    name = data,
+    command = Data(full_path)  # Use the full path to load data
   ),
   tar_target(
-    name = tabl, # Cible pour la formation des tables
-    command = tabl(cleaning) #Création des tables
+    name = cleaning,
+    command = Nettoyage(data)  # Example command, replace with your own logic
   ),
   tar_target(
-    name = base_de_donnee, # Cible pour la formation d'une base de donnees
-    command = Base_de_donnee() #Formation de la base de donnees 
+    name = tabl,
+    command = tabl(cleaning)  # Example command, replace with your own logic
   ),
   tar_target(
-    name = figure_un , # Cible pour la création d'une première figure
-    command = richesse() #Création de la figure
+    name = base_de_donnee,
+    command = Base_de_donnee()  # Example command, replace with your own logic
   ),
   tar_target(
-    name = figure_deux , # Cible pour la création d'une deuxième figure
-    command = abondance() #Création de la figure
+    name = figure_un,
+    command = richesse()  # Example command, replace with your own logic
   ),
   tar_target(
-    name = figure_trois , # Cible pour la création d'une troisième figure
-    command = largeur() #Création de la figure
+    name = figure_deux,
+    command = abondance()  # Example command, replace with your own logic
   ),
   tar_target(
-    name = figure_quatre , # Cible pour la création d'une troisième figure
-    command = profondeur() #Création de la figure
+    name = figure_trois,
+    command = largeur()  # Example command, replace with your own logic
   ),
-  tar_render( #Création du rapport
-    name = rapport , #Cible pour la création du rapport, le nom qui sera donné au document
-    path = "rapport_benthos.Rmd" #Chemin vers le rapport
+  tar_target(
+    name = figure_quatre,
+    command = profondeur()  # Example command, replace with your own logic
+  ),
+  tar_render(
+    name = rapport,
+    path = "rapport_benthos.Rmd"  # Example path, replace with your own
   )
 )

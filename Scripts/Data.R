@@ -1,10 +1,9 @@
-library(withr)
 
 Data <- function(directory_path = "./Données") {
-  # Use withr::with_dir() to temporarily change the directory
-  with_dir(directory_path, {
+  # Define the function inside withr::with_dir()
+  withr::with_dir(directory_path, {
     # Get a list of all CSV files in the directory
-    csv_files <- list.files(".", pattern = "^site_.*\\.csv$", full.names = TRUE)
+    csv_files <- list.files(directory_path, pattern = "^site_.*\\.csv$", full.names = TRUE)
     # Create an empty list to store data frames
     data_list <- list()
     
@@ -21,4 +20,3 @@ Data <- function(directory_path = "./Données") {
     return(data_list)
   })
 }
-
