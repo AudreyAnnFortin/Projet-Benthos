@@ -1,4 +1,4 @@
-
+profondeur <- function()   {
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
@@ -32,3 +32,4 @@ ggplot(data, aes(x = profondeur_riviere, y = nom_sci, size = abondance)) +#fill 
 #theme_minimal()
 
 dbDisconnect(con)
+}
