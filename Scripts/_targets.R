@@ -26,7 +26,6 @@ list(
   tar_target(
     name = path, # Cible
     command = setwd("./Données"), # Emplacement du fichier
-    format = "file"
   ), 
   # La target suivante a "path" pour dépendance et importe les donnees. Sans
   # la séparation de ces deux étapes, la dépendance serait brisée et une
