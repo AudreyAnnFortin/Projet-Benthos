@@ -77,15 +77,38 @@ Résultats {.unnumbered}
 =========================
 blablabla
 
+```{r}
+
+tar_read(figure_un)
+
+```
 
 La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
+
+```{r}
+
+tar_read(figure_deux)
+
+```
 
 
 La seconde figure présente -----
 
+```{r}
+
+tar_read(figure_trois)
+
+```
+
 La troisième figure -----
 
+```{r}
 
+tar_read(figure_quatre)
+
+```
+
+La quatrième figure -----
 
 Format {#format .unnumbered}
 ------
