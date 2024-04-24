@@ -43,9 +43,9 @@ acknowledgements: |
 keywords:
   - Macroinvertébrés
   - Qualité de l'eau
-  - Benthos
-  - Inventaire
-  - Rivière
+  - optional
+  - optional
+  - optional
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
@@ -77,7 +77,6 @@ Résultats {.unnumbered}
 =========================
 blablabla
 
-![Graphique de la richesse. \label{figure 1}]("/Users/sylvie/Desktop/BIO500/Projet-Benthos-main/Scripts/figure_richesse.R"){width=50% height=40%}
 
 La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
 
