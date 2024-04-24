@@ -75,7 +75,7 @@ list(
     priority = 0.95,
     name = figure_un,
     command = {
-      fig_path <- "figures/figure_un.png"  # Chemin où la figure sera enregistrée
+      fig_path <- "RAPPORT/figures/figure_un.png"  # Chemin où la figure sera enregistrée
       richesse_plot <- richesse()  # Appel de la fonction richesse() pour générer le graphique
       ggsave(filename = fig_path, plot = richesse_plot)  # Sauvegarder le graphique dans le fichier
     },
@@ -87,7 +87,7 @@ list(
     name = figure_deux,
     priority = 0.95,
     command = {
-      fig_path <- "figures/figure_deux.png"  # Chemin où la figure sera enregistrée
+      fig_path <- "RAPPORT/figures/figure_deux.png"  # Chemin où la figure sera enregistrée
       abondance_plot<- abondance()
       ggsave(filename = fig_path, plot = abondance_plot)  # Sauvegarder la figure
     },
@@ -99,7 +99,7 @@ list(
     name = figure_trois,
     priority = 0.95,
     command = {
-      fig_path <- "figures/figure_trois.png"  # Chemin où la figure sera enregistrée
+      fig_path <- "RAPPORT/figures/figure_trois.png"  # Chemin où la figure sera enregistrée
       largeur_plot <-largeur()
       ggsave(filename = fig_path, plot= largeur_plot)  # Sauvegarder la figure
     },
@@ -111,7 +111,7 @@ list(
     name = figure_quatre,
     priority = 0.95,
     command = {
-      fig_path <- "figures/figure_quatre.png"  # Chemin où la figure sera enregistrée
+      fig_path <- "RAPPORT/figures/figure_quatre.png"  # Chemin où la figure sera enregistrée
       profondeur_plot <-profondeur()
       ggsave(filename = fig_path, plot = profondeur_plot)  # Sauvegarder la figure
     },
@@ -122,7 +122,7 @@ list(
   tar_render(
     name = rapport,
     priority = 0.5,
-    path = "Rapport/RAPPORT.Rmd",  # Example path, replace with your own
+    path = "RAPPORT/RAPPORT.Rmd",  # Example path, replace with your own
     cue = tar_cue(
       mode = c("always")
     )

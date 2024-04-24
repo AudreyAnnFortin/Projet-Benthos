@@ -50,9 +50,6 @@ Résultats {.unnumbered}
 =========================
 blablabla
 
-```{r}
-tar_read(figure_un)
-```
 
 La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
 
