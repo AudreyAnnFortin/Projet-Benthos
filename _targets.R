@@ -12,7 +12,7 @@ tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afi
 # Scripts R/fonctions nécessaires pour le target
 source("Scripts/Data.R")
 source("Scripts/Nettoyage.R")
-source("Scripts/tables.R")
+source("Scripts/tableau.R")
 source("Scripts/Base de données.R")
 source("Scripts/figure_richesse.R")
 source("Scripts/figure_abondance_relative.R")
@@ -40,7 +40,7 @@ list(
   ),
   tar_target(
     name = tableau, # Cible pour la formation des tables
-    command = tables(cleaning) #Création des tables
+    command = tableau(cleaning) #Création des tables
   ),
   tar_target(
     name = base_de_donnee, # Cible pour la formation d'une base de donnees
