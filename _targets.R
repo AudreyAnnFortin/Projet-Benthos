@@ -68,6 +68,6 @@ list(
   ),
   tar_render(
     name = rapport,
-    path = "rapport_benthos.Rmd"  # Example path, replace with your own
+    path = "Rapport/Rapport.Rmd"  # Example path, replace with your own
   )
 )
