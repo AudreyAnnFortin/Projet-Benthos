@@ -1,0 +1,35 @@
+---
+title: "Abondance des espèces en fonction de la profondeur du site et le moment de l'année"
+author: "Audrey-Ann Fortin, Amélie Garnier, Myriam Marentette"
+date: "2024-04-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Résumé
+Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a unn impact important car on peut alors étudier l'impact de d'autres facteurs sur les populations de différentes espèces, puisqu'on connait leur distribution dans le temps et l'espace. On peut aussi prévoir quelles espèces seront présentes sur un nouveau site d'étude.
+
+## Introduction
+Notre étude vise à déterminer si la profondeur d'un site d'observation avait un imact sur le type d'organisme qu'on y retrouve. Nous voulons aussi explorer la variation de la présence des différents taxons à l'étude selon le temps de l'année
+
+## Méthodes et résultats
+Pour commencer, nous avons procédé à un nettoyage de toutes les données recueillies, s'assurant qu'elles étaient exemptes d'erreurs. Nous les avons ensuite rassembée dans une seule grande base de donnée, dont nous nous sommes servi pour analyser la distribution des espèces grâce à diddérents types de graphiques.
+
+La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
+
+La seconde figure présente -----
+
+La troisième figure -----
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

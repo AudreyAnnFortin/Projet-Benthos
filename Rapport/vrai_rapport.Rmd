@@ -63,11 +63,11 @@ output: rticles::pnas_article
 Résumé {.unnumbered}
 ========================================
 
-Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a un impact important car on peut alors étudier l'impact de d'autres facteurs sur les populations de différentes espèces, puisqu'on connait leur distribution dans le temps et l'espace. On peut aussi prévoir quelles espèces seront présentes sur un nouveau site d'étude
+ Notre recherche se penche sur l'influence de la profondeur d'un site sur les taxons retrouvés ainsi que la saison de l'année où l'échantillon est prélevé. Cela a unn impact important car on peut alors étudier l'impact de d'autres facteurs sur les populations de différentes espèces, puisqu'on connait leur distribution dans le temps et l'espace. On peut aussi prévoir quelles espèces seront présentes sur un nouveau site d'étude
 
 Introduction {.unnumbered}
 ====================================
-Notre étude vise à déterminer si la profondeur d'un site d'observation avait un impact sur le type d'organisme qu'on y retrouve. Nous voulons aussi explorer la variation de la présence des différents taxons à l'étude selon le temps de l'année
+Notre étude vise à déterminer si la profondeur d'un site d'observation avait un imact sur le type d'organisme qu'on y retrouve. Nous voulons aussi explorer la variation de la présence des différents taxons à l'étude selon le temps de l'année
 
 Méthode {.unnumbered}
 =======================================
@@ -77,43 +77,15 @@ Résultats {.unnumbered}
 =========================
 blablabla
 
-```{r figs, fig.cap="\\label{fig1}"}
-
-figure_un<- tar_read(figure_un)
-
-abline(figure_un)
-
-```
 
 La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
-
-```{r figs, fig.cap="\\label{fig2}"}
-
-figure_deux<-tar_read(figure_deux)
-
-abline(figure_deux)
-```
 
 
 La seconde figure présente -----
 
-```{r figs, fig.cap="\\label{fig3}"}
-
-figure_trois<-tar_read(figure_trois)
-
-abline(figure_trois)
-```
-
 La troisième figure -----
 
-```{r figs, fig.cap="\\label{fig4}"}
 
-figure_quatre<-tar_read(figure_quatre)
-
-abline(figure_quatre)
-```
-
-La quatrième figure -----
 
 Format {#format .unnumbered}
 ------
