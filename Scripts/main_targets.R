@@ -70,7 +70,7 @@ list(
   ),
   tar_target(
     name = figure_quatre , # Cible pour la création d'une troisième figure
-    command = ... #Création de la figure
+    command = profondeur() #Création de la figure
   ),
   tar_render( #Création du rapport
     name = rapport, #Cible pour la création du rapport, le nom qui sera donné au document
