@@ -12,7 +12,7 @@ tar_option_set(packages = c("rmarkdown", "knitr")) #Besoin de ces librairies afi
 # Scripts R/fonctions nécessaires pour le target
 source("Scripts/Data.R")
 source("Scripts/Nettoyage.R")
-source("Scripts/table.R")
+source("Scripts/tables.R")
 source("Scripts/Base de données.R")
 source("Scripts/figure_richesse.R")
 source("Scripts/figure_abondance_relative.R")
@@ -20,7 +20,7 @@ source("Scripts/Bubble_plot_largeur.R")
 source("Scripts/Density_plot_profondeur.R")
 
 # Full path to the directory
-full_path <- "C:/Users/myria/OneDrive - USherbrooke/BIO500/Projet-Benthos"
+full_path <- getwd()
 
 # Extract the last part of the path
 project_name <- basename(full_path)
@@ -43,31 +43,47 @@ list(
     command = Nettoyage(data)  # Example command, replace with your own logic
   ),
   tar_target(
-    name = tabl,
-    command = tabl(cleaning)  # Example command, replace with your own logic
+    name = tables,
+    command = tables(cleaning)  # Example command, replace with your own logic
   ),
   tar_target(
-    name = base_de_donnee,
+    name = bd,
     command = Base_de_donnee()  # Example command, replace with your own logic
   ),
   tar_target(
     name = figure_un,
-    command = richesse()  # Example command, replace with your own logic
+    command = {
+      fig_path <- "figures/figure_un.png"  # Chemin où la figure sera enregistrée
+      richesse_plot <- richesse()  # Appel de la fonction richesse() pour générer le graphique
+      ggsave(filename = fig_path, plot = richesse_plot)  # Sauvegarder le graphique dans le fichier
+    },
   ),
   tar_target(
     name = figure_deux,
-    command = abondance()  # Example command, replace with your own logic
+    command = {
+      fig_path <- "figures/figure_deux.png"  # Chemin où la figure sera enregistrée
+      abondance_plot<- abondance()
+      ggsave(filename = fig_path, plot = abondance_plot)  # Sauvegarder la figure
+    },
   ),
   tar_target(
     name = figure_trois,
-    command = largeur()  # Example command, replace with your own logic
+    command = {
+      fig_path <- "figures/figure_trois.png"  # Chemin où la figure sera enregistrée
+      largeur_plot <-largeur()
+      ggsave(filename = fig_path, plot= largeur_plot)  # Sauvegarder la figure
+    },
   ),
   tar_target(
     name = figure_quatre,
-    command = profondeur()  # Example command, replace with your own logic
+    command = {
+      fig_path <- "figures/figure_quatre.png"  # Chemin où la figure sera enregistrée
+      profondeur_plot <-profondeur()
+      ggsave(filename = fig_path, plot = profondeur_plot)  # Sauvegarder la figure
+    },
   ),
   tar_render(
     name = rapport,
-    path = "Rapport/Rapport.Rmd"  # Example path, replace with your own
+    path = "Rapport/RAPPORT.Rmd"  # Example path, replace with your own
   )
 )
