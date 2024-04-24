@@ -51,7 +51,13 @@ Résultats {.unnumbered}
 blablabla
 
 
-La première figure montre la courbe de ---- en fonction de ----.On observe que ------. On peut donc en déduire que -----.
+La première figure montre l'a courbe'histogramme du nombre d'espèces observées par années. On remarque que malgré une certaine variation, le nombre d'espèce semble se maintenir deuis 2016, ce qui est bon signe. Si les macroinvertébrés sont toujours présents, c'est que le réseau trophique n'est pas trop touché par les changements environnementaux pour le moment.
+
+La seconde figure montre l'abondance relative par espèce selon l'année d'observation. On peut donc voir quelles sont les espèces les plus présentes chaque année et la proportion qu'elles occupent parmis la biodiversité totale des macrocrustacés. On observe au fil des années une augmentation de la population de Tanytarsini, et une diminution de Rhithrogena. Cela peut être dû aux changements environnementaux qui peuvent avantager certains organismes et nuire à d'autres.
+
+La troisième figure montre l'abondance d'espèces selon la largeur de la rivière. On obserbe que plus la rivière est étroite, plus nombreuses sont les espèces observées. Il semble y avoir un reguain dans la quantité d'espèces quand la rivière a une largeur de 80m. Il se peut toutefois que cela soit dû à une erreur.
+
+La dernière figulre, la quatrième, présente la densité des populations de chaque espèces selon cette foi la profondeur de la rivière. Encore une fois, moins elle est profonce, plus nombreux sont les organismes. On observe ici aussi un deuxième pic, à 30, et cela peut être dû à la même erreur.
 
 
 La seconde figure présente -----
@@ -59,77 +65,6 @@ La seconde figure présente -----
 La troisième figure -----
 
 
-
-Format {#format .unnumbered}
-------
-
-Many authors find it useful to organize their manuscripts with the
-following order of sections; Title, Author Affiliation, Keywords,
-Abstract, Significance Statement, Results, Discussion, Materials and
-methods, Acknowledgments, and References. Other orders and headings are
-permitted.
-
-Manuscript Length {#manuscript-length .unnumbered}
------------------
-
-PNAS generally uses a two-column format averaging 67 characters,
-including spaces, per line. The maximum length of a Direct Submission
-research article is six pages and a PNAS PLUS research article is ten
-pages including all text, spaces, and the number of characters displaced
-by figures, tables, and equations. When submitting tables, figures,
-and/or equations in addition to text, keep the text for your manuscript
-under 39,000 characters (including spaces) for Direct Submissions and
-72,000 characters (including spaces) for PNAS PLUS.
-
-References {#references .unnumbered}
-----------
-
-References should be cited in numerical order as they appear in text;
-this will be done automatically via bibtex, e.g. @belkin2002using and
-@guide2013. All references, including
-for the SI, should be included in the main manuscript file. References
-appearing in both sections should not be duplicated. SI references
-included in tables should be included with the main reference section.
-
-Data Archival {#data-archival .unnumbered}
--------------
-
-PNAS must be able to archive the data essential to a published article.
-Where such archiving is not possible, deposition of data in public
-databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata,
-and others outlined in the Information for Authors, is acceptable.
-
-
-
-Language-Editing Services {#language-editing-services .unnumbered}
--------------------------
-
-Prior to submission, authors who believe their manuscripts would benefit
-from professional editing are encouraged to use a language-editing
-service (see list at www.pnas.org/site/authors/language-editing.xhtml).
-PNAS does not take responsibility for or endorse these services, and
-their use has no bearing on acceptance of a manuscript for publication.
-
-![Placeholder image of a frog with a long example caption to show
-justification setting.<span data-label="fig:frog"></span>](frog.png)
-
-Digital Figures {#sec:figures .unnumbered}
----------------
-
-Only TIFF, EPS, and high-resolution PDF for Mac or PC are allowed for
-figures that will appear in the main text, and images must be final
-size. Authors may submit U3D or PRC files for 3D images; these must be
-accompanied by 2D representations in TIFF, EPS, or high-resolution PDF
-format. Color images must be in RGB (red, green, blue) mode. Include the
-font files for any text.
-
-Figures and Tables should be labelled and referenced in the standard way
-using the `\label{}` and `\ref{}` commands.
-
-Figure \[fig:frog\] shows an example of how to insert a column-wide
-figure. To insert a figure wider than one column, please use the
-`\begin{figure*}...\end{figure*}` environment. Figures wider than one
-column should be sized to 11.4 cm or 17.8 cm wide.
 
 Single column equations {#single-column-equations .unnumbered}
 -----------------------
