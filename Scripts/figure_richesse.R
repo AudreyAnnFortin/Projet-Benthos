@@ -1,6 +1,5 @@
-library(ggplot2)
-library(RSQLite)
-
+richesse <- function()   {
+  
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
@@ -28,3 +27,4 @@ ggplot(data_espece, aes(x = as.factor(annee), y = nb_especes, fill = as.factor(a
   theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "none") # Rotation des étiquettes de l'axe x pour une meilleure lisibilité et suppression de la légende
 
 dbDisconnect(con)
+}
