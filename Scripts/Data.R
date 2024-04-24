@@ -21,3 +21,4 @@ Data <- function(data_subdirectory = "Données") {
   # Return the populated data_list
   return(data_list)
 }
+Data()

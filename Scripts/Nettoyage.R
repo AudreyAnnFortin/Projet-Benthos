@@ -37,6 +37,7 @@ Nettoyage <- function(data_list) {
     
     data_list[[file_name]] <- bent
   }
+  return(data_list)
 }
 
 

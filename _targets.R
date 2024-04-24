@@ -33,58 +33,98 @@ print(project_name)
 list(
   tar_target(
     name = path,
-    command = setwd(full_path)  # Set working directory to the full path
+    priority = 1,
+    command = setwd(full_path),  # Set working directory to the full path
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = data,
-    command = Data()  # Use the full path to load data
+    command = Data(),  # Use the full path to load data
+    priority = 0.99,
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = cleaning,
-    command = Nettoyage(data)  # Example command, replace with your own logic
+    command = Nettoyage(data),  # Example command, replace with your own logic
+    priority = 0.98,
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = tables,
-    command = tables(cleaning)  # Example command, replace with your own logic
+    priority = 0.97,
+    command = tables(cleaning),  # Example command, replace with your own logic
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = bd,
-    command = Base_de_donnee()  # Example command, replace with your own logic
+    priority = 0.96,
+    command = Base_de_donnee(),  # Example command, replace with your own logic
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
+    priority = 0.95,
     name = figure_un,
     command = {
       fig_path <- "figures/figure_un.png"  # Chemin où la figure sera enregistrée
       richesse_plot <- richesse()  # Appel de la fonction richesse() pour générer le graphique
       ggsave(filename = fig_path, plot = richesse_plot)  # Sauvegarder le graphique dans le fichier
     },
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = figure_deux,
+    priority = 0.95,
     command = {
       fig_path <- "figures/figure_deux.png"  # Chemin où la figure sera enregistrée
       abondance_plot<- abondance()
       ggsave(filename = fig_path, plot = abondance_plot)  # Sauvegarder la figure
     },
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = figure_trois,
+    priority = 0.95,
     command = {
       fig_path <- "figures/figure_trois.png"  # Chemin où la figure sera enregistrée
       largeur_plot <-largeur()
       ggsave(filename = fig_path, plot= largeur_plot)  # Sauvegarder la figure
     },
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_target(
     name = figure_quatre,
+    priority = 0.95,
     command = {
       fig_path <- "figures/figure_quatre.png"  # Chemin où la figure sera enregistrée
       profondeur_plot <-profondeur()
       ggsave(filename = fig_path, plot = profondeur_plot)  # Sauvegarder la figure
     },
+    cue = tar_cue(
+      mode = c("always")
+    )
   ),
   tar_render(
     name = rapport,
-    path = "Rapport/RAPPORT.Rmd"  # Example path, replace with your own
+    priority = 0.5,
+    path = "Rapport/RAPPORT.Rmd",  # Example path, replace with your own
+    cue = tar_cue(
+      mode = c("always")
+    )
   )
 )

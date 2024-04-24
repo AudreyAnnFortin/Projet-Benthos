@@ -1,8 +1,8 @@
-abondance <- function()   {
-  # Connecter à la base de données
+abondance <- function() {
+  # Connect to the database
   con <- dbConnect(SQLite(), dbname = "benthos.db")
   
-  # Définir la requête SQL pour sélectionner les 10 espèces les plus abondantes et regrouper les autres sous "Autres"
+  # Define the SQL query to select the 10 most abundant species and group others as "Others"
   query <- "
     WITH Top11 AS (
       SELECT 
@@ -34,19 +34,22 @@ abondance <- function()   {
       date_obs, nom_sci
   "
   
-  # Exécuter la requête SQL et récupérer les résultats dans un dataframe
+  # Execute the SQL query and retrieve the results into a dataframe
   data_espece <- dbGetQuery(con, query)
   
-  # Convertir la colonne date_obs en format de date
+  # Print the retrieved data for debugging
+  #print(data_espece)
+  
+  # Convert the date_obs column to date format
   data_espece$date_obs <- as.Date(data_espece$date_obs)
   
-  # Créer un vecteur pour définir l'ordre des facteurs de la variable nom_sci
+  # Create a vector to define the order of factors of the nom_sci variable
   esp_ordre <- c(unique(data_espece$nom_sci[data_espece$nom_sci != "Autres"]), "Autres")
   
-  # Convertir la variable nom_sci en facteur avec l'ordre spécifié
+  # Convert the nom_sci variable to a factor with the specified order
   data_espece$nom_sci <- factor(data_espece$nom_sci, levels = esp_ordre)
   
-  # Créer le graphique
+  # Create the plot
   abondance_plot <- ggplot(data_espece, aes(x = format(date_obs, "%Y"), y = abondance, fill = nom_sci)) +
     geom_bar(stat = "identity") +
     labs(title = "Abondance relative des espèces à chaque année",
@@ -57,9 +60,9 @@ abondance <- function()   {
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
   
-  # Déconnecter de la base de données
+  # Disconnect from the database
   dbDisconnect(con)
   
-  # Retourner le graphique
+  # Return the plot
   return(abondance_plot)
 }
