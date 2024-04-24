@@ -21,6 +21,7 @@ source("Scripts/Density_plot_profondeur.R")
 
 # Full path to the directory
 full_path <- getwd()
+print(full_path)
 
 # Extract the last part of the path
 project_name <- basename(full_path)
@@ -36,7 +37,7 @@ list(
   ),
   tar_target(
     name = data,
-    command = Data(full_path)  # Use the full path to load data
+    command = Data()  # Use the full path to load data
   ),
   tar_target(
     name = cleaning,

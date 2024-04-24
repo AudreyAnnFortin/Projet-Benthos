@@ -1,12 +1,10 @@
-Data <- function(subdirectory = "Données") {
-  # Save current working directory
-  original_dir <- getwd()
-  
-  # Change working directory to the specified subdirectory
-  setwd(file.path(original_dir, subdirectory))
-  
+Data <- function(data_subdirectory = "Données") {
+  # Set the full path to the data directory
+  data_dir <- file.path(getwd(), data_subdirectory)
+
   # Get a list of all CSV files in the directory
-  csv_files <- list.files(pattern = "^site_.*\\.csv$", full.names = TRUE)
+  csv_files <- list.files(data_dir, pattern = "^site_.*\\.csv$", full.names = TRUE)
+  
   # Create an empty list to store data frames
   data_list <- list()
   
@@ -20,10 +18,6 @@ Data <- function(subdirectory = "Données") {
     data_list[[file_name]] <- data
   }
   
-  # Restore original working directory
-  setwd(original_dir)
-  
   # Return the populated data_list
   return(data_list)
 }
-
