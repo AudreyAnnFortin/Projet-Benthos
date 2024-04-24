@@ -1,4 +1,4 @@
-
+abondance <- function()   {
 # Connecter à la base de données
 con <- dbConnect(SQLite(), dbname = "benthos.db")
 
@@ -59,4 +59,4 @@ ggplot(data_espece, aes(x = format(date_obs, "%Y"), y = abondance, fill = nom_sc
 
 # Déconnecter de la base de données
 dbDisconnect(con)
-
+}
