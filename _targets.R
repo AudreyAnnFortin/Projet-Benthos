@@ -39,7 +39,7 @@ list(
     command = Nettoyage(data) # Nettoyage des données
   ),
   tar_target(
-    name = tables, # Cible pour la formation des tables
+    name = tableau, # Cible pour la formation des tables
     command = tables(cleaning) #Création des tables
   ),
   tar_target(
