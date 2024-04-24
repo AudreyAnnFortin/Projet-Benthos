@@ -19,7 +19,7 @@ source("Scripts/Nettoyage.R")
 source("Scripts/tables.R")
 source("Scripts/Base de données.R")
 source("Scripts/figure_richesse.R")
-source("Scripts/figure_abondance.R")
+source("Scripts/figure_abondance_relative.R")
 source("Scripts/Bubble_plot_largeur.R")
 source("Scripts/Density_plot_profondeur.R")
 
