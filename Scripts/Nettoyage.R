@@ -39,5 +39,4 @@ Nettoyage <- function(data_list) {
   }
 }
 
-Nettoyage(data_list)
 
